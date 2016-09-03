@@ -8,6 +8,7 @@ Module.register("MMM-ImageDisplay",{
 	getDom: function() {
 		var wrapper = document.createElement("img");
 		wrapper.src = 'modules/MMM-ImageDisplay/images/' + this.config.image;
+		wrapper.setAttribute("style", "max-width: 10%");
 		return wrapper;
 	}
 });
