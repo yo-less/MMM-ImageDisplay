@@ -1,15 +1,15 @@
 Module.register("MMM-ImageDisplay",{
 
 	defaults: {
-		image: 'lys.jpg',
-		config: '50%'
+		image: 'test.png',
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var wrapper = document.createElement("img");
 		wrapper.src = 'modules/MMM-ImageDisplay/images/' + this.config.image;
-		wrapper.setAttribute("style", "max-width: " + this.config.instaMax);
+		wrapper.style.maxWidth = this.config.maxWidth;		// Use relative or absolute parameters
+		wrapper.style.maxHeight = this.config.maxHeight;	// Use absolute parameters
 		return wrapper;
 	}
 });
